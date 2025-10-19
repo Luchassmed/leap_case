@@ -15,3 +15,13 @@ models:
           - dbt_utils.accepted_range:
               min_value: 0
               inclusive: true
+      - name: PEAKDAY_CYKLER
+        description: "højeste hverdagstrafik for cykler"
+      - name: CYKLER_7_19
+        description: "cykeltrafik 07-19"
+      - name: KTJ_7_19
+        description: "køretøjer 07-19"
+      - name: TUNG_PCT_REAL
+        description: "andel tunge køretøjer i procent"
+      - name: LADCYKLER_PCT_REAL
+        description: "andel ladcykler i procent"
