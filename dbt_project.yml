@@ -6,6 +6,11 @@ name: 'tt_case'
 version: '1.0.0'
 config-version: 2
 
+# Disable comment that dbt appends to each statement - det her er fra chatgpt
+query-comment:
+  comment: ''
+  append: false
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'Luchassmed'
 

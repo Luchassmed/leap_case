@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: stg_trafiktal
+  - name: staging_trafiktal
     description: "Trafiktal (AADT). tællested og år"
     columns:
       - name: T_NR
