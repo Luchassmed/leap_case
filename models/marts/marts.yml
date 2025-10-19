@@ -1,0 +1,29 @@
+version: 2
+models:
+  - name: dim_counter
+    description: "tællesteder (attributter per T_NR)"
+    columns:
+      - name: T_NR
+        description: "tællested id"
+        tests: [not_null, unique]
+
+  - name: fact_aadt
+    description: "AADT per tællested og år"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [T_NR, AAR]
+    columns:
+      - name: T_NR
+        description: "tællested id"
+        tests: [not_null]
+      - name: AAR
+        description: "År"
+        tests: [not_null]
+      - name: AADT_CYKLER
+        description: "årsdøgntrafik for cykler"
+        tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+                inclusive: true

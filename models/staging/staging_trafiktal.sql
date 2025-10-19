@@ -24,8 +24,8 @@ select
   CYKLER_7_19::int as CYKLER_7_19,
   KTJ_7_19::int as KTJ_7_19,
   TUNG_PCT_REAL::float as TUNG_PCT_REAL,
-  LADCYKLER_PCT_REAL::float as LADCYKLER_PCT_REAL,
+  LADCYKLER_PCT_REAL::float as LADCYKLER_PCT_REAL
 
 from src
 -- tællersted + år
-where T_NR is not null and AAR is not null;
+where T_NR is not null and AAR is not null
