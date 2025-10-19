@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: stg_trafiktal
+    description: "Trafiktal (AADT). tællested og år"
+    columns:
+      - name: T_NR
+        description: "id af tællested"
+        tests: [not_null]
+      - name: AAR
+        description: "år for tælling"
+        tests: [not_null]
+      - name: AADT_CYKLER
+        description: "gennemsnitlig daglig cykeltrafik"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
