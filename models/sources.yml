@@ -5,3 +5,4 @@ sources:
     schema: RAW
     tables:
       - name: TRAFIKTAL_RAW
+        description: "trafiktal fra opendata.dk (CSV fil)." 

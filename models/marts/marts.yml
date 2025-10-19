@@ -8,7 +8,7 @@ models:
         tests: [not_null, unique]
 
   - name: fact_aadt
-    description: "AADT per tællested og år"
+    description: "AADT per tællested og år. faktatabel med en række per (T_NR, AAR). MAX over dubletter"
     tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
@@ -18,7 +18,7 @@ models:
         description: "tællested id"
         tests: [not_null]
       - name: AAR
-        description: "År"
+        description: "år"
         tests: [not_null]
       - name: AADT_CYKLER
         description: "årsdøgntrafik for cykler"
