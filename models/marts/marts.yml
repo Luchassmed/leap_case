@@ -11,8 +11,7 @@ models:
     description: "AADT per tællested og år. faktatabel med en række per (T_NR, AAR). MAX over dubletter"
     tests:
       - dbt_utils.unique_combination_of_columns:
-          arguments:
-            combination_of_columns: [T_NR, AAR]
+          combination_of_columns: [T_NR, AAR]
     columns:
       - name: T_NR
         description: "tællested id"
@@ -24,6 +23,5 @@ models:
         description: "årsdøgntrafik for cykler"
         tests:
           - dbt_utils.accepted_range:
-              arguments:
-                min_value: 0
-                inclusive: true
+              min_value: 0
+              inclusive: true
