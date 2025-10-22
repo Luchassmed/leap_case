@@ -25,3 +25,16 @@ models:
           - dbt_utils.accepted_range:
               min_value: 0
               inclusive: true
+
+  - name: til_leap
+    description: "udvalgte t_nr for den vej jeg cykler fra mit hjem til leap kontoret"
+    columns:
+      - name: RAEKKEFOELGE
+        description: "den rækkefølge af tællesteder jeg cykler forbi"
+        tests: [not_null]
+      - name: T_NR
+        description: "tællested id"
+        tests: [not_null, unique]
+      - name: AAR
+        description: "år"
+        tests: [not_null]

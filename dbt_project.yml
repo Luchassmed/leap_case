@@ -5,6 +5,9 @@ name: "tt_case"
 version: "1.0.0"
 config-version: 2
 
+seeds:
+  +schema: STAGING
+
 # Disable comment that dbt appends to each statement - det her er fra chatgpt
 query-comment:
   comment: ""
